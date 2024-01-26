@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -15,6 +16,15 @@ class ProductController extends Controller
     }
 
     public function store(Request $request){
-        dd($request);
+        $formFields = $request->validate([
+            'name' => 'required',
+            'qty' => 'required|numeric',
+            'price' => 'required|decimal:0,2',
+            'description' => 'required'
+        ]);
+
+        Product::create($formFields);
+
+        return redirect(route('product.index'));
     }
 }
