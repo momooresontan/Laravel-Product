@@ -25,3 +25,5 @@ Route::get('/products/create', [ProductController::class, 'create'])->name('prod
 Route::post('/products', [ProductController::class, 'store'])->name('product.store');
 
 Route::get('/products/{product}/edit', [ProductController::class,'edit'])->name('product.edit');
+
+Route::patch('/products/{product}/edit', [ProductController::class,'edit'])->name('product.edit');
