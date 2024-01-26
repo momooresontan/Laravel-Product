@@ -8,6 +8,9 @@
         @endif
     </div>
     <div>
+        <div>
+            <a href="{{ route('product.create') }}">Create Product</a>
+        </div>
         <table border="1"> 
             <tr>
                 <th>ID</th>
