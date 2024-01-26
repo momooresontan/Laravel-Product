@@ -7,7 +7,7 @@
             @endforeach
         </ul>
     @endif
-    <form method="POST" action="{{ route('product.store') }}">
+    <form method="POST" action="{{ route('product.update', ['product' => $product]) }}">
         @csrf
         @method('PATCH')
         
