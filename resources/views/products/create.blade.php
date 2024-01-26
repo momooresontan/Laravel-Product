@@ -17,7 +17,12 @@
     @endif
     <form method="POST" action="{{route('product.store')}}">
         @csrf
-        <div>
+        <x-form.input name="name" placeholder="name"  />
+        <x-form.input name="qty" placeholder="qty"  />
+        <x-form.input name="price" placeholder="price"  />
+       
+
+        {{-- <div>
             <label for="name">Name</label>
             <input type="text" name="name" id="name" placeholder="name">            
         </div>
@@ -28,7 +33,7 @@
         <div>
             <label for="price">Price</label>
             <input type="text" name="price" id=price" placeholder="price">            
-        </div>
+        </div> --}}
         <div>
             <label for="description">Description</label>
             <textarea name="description" id="" cols="30" rows="10" placeholder="description"></textarea>
