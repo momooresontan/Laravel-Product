@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>Create a product</h1>
-    <form method="POST" action="">
+    <form method="POST" action="{{route('product.store')}}">
+        @csrf
         <div>
             <label for="name">Name</label>
             <input type="text" name="name" id="name" placeholder="name">            
@@ -23,8 +24,9 @@
         </div>
         <div>
             <label for="description">Description</label>
-
+            <textarea name="description" id="" cols="30" rows="10" placeholder="description"></textarea>
         </div>
+        <button>Add product</button>
     </form>
 </body>
 </html>
