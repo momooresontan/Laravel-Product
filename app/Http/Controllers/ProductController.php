@@ -28,4 +28,8 @@ class ProductController extends Controller
 
         return redirect(route('product.index'));
     }
+
+    public function edit(Product $product){
+        dd($product);
+    }
 }
