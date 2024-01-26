@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Create a product</h1>
+    <h1>Create product</h1>
     @if($errors->any())
     <ul>
         @foreach($errors->all() as $error)
@@ -20,25 +20,8 @@
         <x-form.input name="name" placeholder="name"  />
         <x-form.input name="qty" placeholder="qty"  />
         <x-form.input name="price" placeholder="price"  />
-       
-
-        {{-- <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="name">            
-        </div>
-        <div>
-            <label for="qty">Qty</label>
-            <input type="text" name="qty" id="qty" placeholder="qty">            
-        </div>
-        <div>
-            <label for="price">Price</label>
-            <input type="text" name="price" id=price" placeholder="price">            
-        </div> --}}
-        <div>
-            <label for="description">Description</label>
-            <textarea name="description" id="" cols="30" rows="10" placeholder="description"></textarea>
-        </div>
-        <button>Add product</button>
+        <x-form.textarea name="description" placeholder='description' cols="30" rows="5" />
+        <x-form.button>Add product</x-form.button>
     </form>
 </body>
 </html>

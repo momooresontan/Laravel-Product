@@ -1,5 +1,5 @@
 @props(['name'])
-<x-form.div>
+<div>
     <label for="{{ $name }}">{{ ucwords($name) }}</label>
-    <textarea name="description" cols="30" rows="10" {{ $attributes }}>{{ $slot??old($name) }}</textarea>
-</x-form.div>
+    <textarea name="{{$name}}" {{ $attributes }}>{{ $slot??old($name) }}</textarea>
+</div>
